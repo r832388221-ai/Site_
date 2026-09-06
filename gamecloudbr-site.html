@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="GameCloudBR: hospedagem para Minecraft, DayZ, FiveM e servidores VPS.">
+  <title>GameCloudBR | Hospedagem gamer e VPS</title>
+  <style>
+    :root{--bg:#070a12;--panel:#0e1422;--panel2:#111b2d;--text:#f5f7ff;--muted:#9ba8c7;--cyan:#20e6ff;--purple:#9b5cff;--pink:#ff3cac;--line:rgba(255,255,255,.1);--radius:20px;}
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:radial-gradient(circle at 80% 0%,rgba(155,92,255,.18),transparent 35%),radial-gradient(circle at 10% 30%,rgba(32,230,255,.1),transparent 28%),var(--bg);color:var(--text);line-height:1.6}
+    a{color:inherit;text-decoration:none}.container{width:min(1120px,92%);margin:auto}
+    header{position:sticky;top:0;z-index:10;background:rgba(7,10,18,.78);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+    .nav{height:76px;display:flex;align-items:center;justify-content:space-between}.logo{font-size:1.25rem;font-weight:900;letter-spacing:.04em}.logo span{color:var(--cyan);text-shadow:0 0 18px rgba(32,230,255,.8)}
+    nav{display:flex;gap:26px;color:var(--muted);font-size:.95rem}nav a:hover{color:var(--cyan)}.menu{display:none;background:none;border:1px solid var(--line);color:var(--text);padding:8px 10px;border-radius:10px;font-size:1.2rem}
+    .hero{min-height:650px;display:grid;place-items:center;padding:90px 0 70px;text-align:center}.eyebrow{display:inline-flex;border:1px solid rgba(32,230,255,.35);background:rgba(32,230,255,.08);color:var(--cyan);padding:7px 13px;border-radius:999px;font-size:.82rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase}.hero h1{font-size:clamp(2.7rem,7vw,5.8rem);line-height:1.02;margin:25px auto 20px;max-width:900px;letter-spacing:-.06em}.gradient{background:linear-gradient(100deg,var(--cyan),#fff 43%,var(--pink));-webkit-background-clip:text;background-clip:text;color:transparent}.hero p{max-width:680px;margin:auto;color:var(--muted);font-size:1.12rem}.actions{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-top:32px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 20px;border-radius:12px;border:1px solid var(--line);font-weight:800;transition:.2s}.btn.primary{background:linear-gradient(100deg,var(--cyan),var(--purple));color:#050711;border:0;box-shadow:0 0 28px rgba(32,230,255,.2)}.btn:hover{transform:translateY(-2px);filter:brightness(1.1)}
+    section{padding:90px 0}.section-head{max-width:680px;margin-bottom:35px}.section-head h2{font-size:clamp(2rem,4vw,3.2rem);line-height:1.1;margin:10px 0}.section-head p{color:var(--muted)}
+    .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.card{background:linear-gradient(145deg,rgba(17,27,45,.95),rgba(14,20,34,.95));border:1px solid var(--line);border-radius:var(--radius);padding:25px;transition:.25s}.card:hover{border-color:rgba(32,230,255,.5);transform:translateY(-5px);box-shadow:0 12px 38px rgba(0,0,0,.25)}.icon{font-size:2rem;margin-bottom:15px}.card h3{margin-bottom:8px}.card p{color:var(--muted);font-size:.95rem}.tag{display:inline-block;color:var(--cyan);font-size:.75rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px}
+    .about{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}.about-box{padding:35px;border-radius:28px;background:linear-gradient(135deg,rgba(155,92,255,.2),rgba(32,230,255,.06));border:1px solid rgba(155,92,255,.28)}.about-box strong{display:block;font-size:2.2rem;line-height:1.1;margin-bottom:12px}.checks{list-style:none;display:grid;gap:13px;margin-top:23px}.checks li:before{content:"✓";color:var(--cyan);font-weight:900;margin-right:10px}
+    .cta{border:1px solid rgba(32,230,255,.25);background:linear-gradient(110deg,rgba(32,230,255,.1),rgba(155,92,255,.17));border-radius:28px;padding:52px;text-align:center}.cta h2{font-size:clamp(2rem,4vw,3.4rem);line-height:1.1;margin-bottom:14px}.cta p{color:var(--muted);max-width:600px;margin:0 auto 25px}
+    footer{border-top:1px solid var(--line);padding:30px 0;color:var(--muted);font-size:.9rem}.footer-row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.neon{color:var(--cyan)}
+    @media(max-width:850px){.grid{grid-template-columns:repeat(2,1fr)}.about{grid-template-columns:1fr}.menu{display:block}nav{display:none;position:absolute;left:4%;right:4%;top:70px;padding:18px;flex-direction:column;gap:14px;background:var(--panel);border:1px solid var(--line);border-radius:14px}nav.open{display:flex}}
+    @media(max-width:560px){.grid{grid-template-columns:1fr}.hero{min-height:590px;padding-top:65px}.cta{padding:32px 22px}.nav{height:68px}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="logo" href="#inicio">Game<span>Cloud</span>BR</a>
+      <button class="menu" aria-label="Abrir menu">☰</button>
+      <nav>
+        <a href="#inicio">Início</a><a href="#servicos">Serviços</a><a href="#sobre">Sobre nós</a><a href="#contato">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="container">
+        <span class="eyebrow">Performance para jogar sem limites</span>
+        <h1>Seu servidor. <span class="gradient">Sua comunidade.</span> Seu jogo.</h1>
+        <p>Hospedagem para Minecraft, DayZ, FiveM e VPS com estrutura pensada para quem quer jogar, criar e crescer online.</p>
+        <div class="actions"><a class="btn primary" href="#servicos">Conheça os serviços</a><a class="btn" href="#contato">Fale com a gente</a></div>
+      </div>
+    </section>
+
+    <section id="servicos">
+      <div class="container">
+        <div class="section-head"><span class="tag">O que oferecemos</span><h2>Infraestrutura para sua próxima fase.</h2><p>Escolha a solução ideal para hospedar seus jogos, projetos e comunidades.</p></div>
+        <div class="grid">
+          <article class="card"><div class="icon">⛏️</div><h3>Minecraft</h3><p>Crie seu mundo, reúna sua comunidade e jogue com uma estrutura preparada para seu servidor.</p></article>
+          <article class="card"><div class="icon">☣️</div><h3>DayZ</h3><p>Hospedagem para experiências de sobrevivência intensas, com espaço para sua comunidade crescer.</p></article>
+          <article class="card"><div class="icon">🏙️</div><h3>FiveM</h3><p>Leve seu servidor de roleplay ou comunidade para uma experiência online mais estável.</p></article>
+          <article class="card"><div class="icon">⚡</div><h3>VPS</h3><p>Mais liberdade e controle para aplicações, projetos, bots e servidores personalizados.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre">
+      <div class="container about">
+        <div><span class="tag">Sobre a GameCloudBR</span><h2>Feita para quem leva o jogo a sério.</h2><p>A GameCloudBR nasceu para oferecer soluções digitais focadas em games e servidores. Nosso objetivo é simplificar a hospedagem e ajudar criadores, comunidades e jogadores a colocarem seus projetos no ar.</p><ul class="checks"><li>Serviços voltados para jogos e projetos online</li><li>Soluções para diferentes níveis de necessidade</li><li>Atendimento próximo para orientar sua escolha</li></ul></div>
+        <div class="about-box"><strong>Pronto para colocar seu servidor no ar?</strong><p>Comece com a solução que combina com o seu projeto e evolua junto com a sua comunidade.</p><a class="btn primary" href="#contato" style="margin-top:22px">Começar agora</a></div>
+      </div>
+    </section>
+
+    <section id="contato"><div class="container"><div class="cta"><span class="tag">Vamos conversar</span><h2>Seu próximo projeto começa aqui.</h2><p>Entre em contato com a GameCloudBR para conhecer as opções de hospedagem para seu servidor ou VPS.</p><a class="btn primary" href="mailto:SEU_EMAIL_AQUI">Solicitar atendimento</a></div></div></section>
+  </main>
+
+  <footer><div class="container footer-row"><span>© 2026 GameCloudBR. Todos os direitos reservados.</span><span class="neon">Hospedagem gamer e VPS</span></div></footer>
+  <script>
+    const menu=document.querySelector('.menu'), nav=document.querySelector('nav');
+    menu.addEventListener('click',()=>nav.classList.toggle('open'));
+    document.querySelectorAll('nav a').forEach(link=>link.addEventListener('click',()=>nav.classList.remove('open')));
+  </script>
+</body>
+</html>
